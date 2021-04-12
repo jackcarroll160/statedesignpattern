@@ -1,3 +1,5 @@
+package statedesignpattern;
+
 /**
  * TV Class for State Design Pattern
  * @author Jackson Carroll
@@ -16,7 +18,13 @@ public class TV {
         this.HomeState = new HomeState(this);
         this.NetflixState = new NetflixState(this);
         this.HuluState = new HuluState(this);
-        setState(state);
+        
+        try {
+            state = HomeState;
+        }
+        catch(Exception e) {
+            e.printStackTrace();
+        }
     }
 
     /**

@@ -1,4 +1,4 @@
-//package csce247.assignments.state;
+package statedesignpattern;
 
 public class TVDriver {
 
