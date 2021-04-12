@@ -9,14 +9,14 @@ public class HuluState implements State {
 
     /**
      * Parameterized Constructor for HuluState class
-     * @param tv a TV for the states 
+     * @param tv a TV for the state
      */
     public HuluState(TV tv) {
         this.tv = tv;
     }
 
     /**
-     * Displays loading home screen message for pressing home button
+     * Displays loading home screen message for pressing home button in Hulu
      */
     @Override
     public void pressHomeButton() {
@@ -38,7 +38,7 @@ public class HuluState implements State {
      */
     @Override
     public void pressHuluButton() {
-        System.out.println("We are already in Hulu...");
+        System.out.println("We are already in Hulu");
         tv.setState(tv.getHuluState());
     }
 
@@ -48,7 +48,7 @@ public class HuluState implements State {
     @Override
     public void pressMovieButton() {
         System.out.println("Hulu Movies:");
-        String[] huluMovieList = {"Stuff"};
+        String[] huluMovieList = {"Gemini Man", "Deadpool", "Shrek", "Shrek 2", "Cars"};
         for(int i = 0; i < huluMovieList.length; i++)
             System.out.println(" - " + huluMovieList[i]);
         System.out.println();
